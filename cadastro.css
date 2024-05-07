@@ -19,10 +19,10 @@ nav.menu-lateral{
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: .5s;
 }
 
-nav.menu-lateral:hover{
+nav.menu-lateral.expandir{
     width: 300px;
 }
 
@@ -46,6 +46,10 @@ ul li.item-menu{
     transition: .2s;
 }
 
+ul li.ativo{
+    background-color: blue;
+}
+
 ul li.item-menu:hover{
     background: blue;
 }
@@ -60,7 +64,14 @@ ul li.item-menu a{
     line-height: 40px;
 }
 ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
     margin-left: 40px;
+    opacity: 1;
 }
 
 ul li.item-menu a .icon > i{
