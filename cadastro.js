@@ -1,14 +1,22 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const content = document.querySelector('.content');
-    
-    if (sidebar.style.left === "-250px") {
-      sidebar.style.left = "0";
-      content.style.marginLeft = "250px";
-      alert("Barra lateral aberta!"); // Adiciona um alerta para teste
-    } else {
-      sidebar.style.left = "-250px";
-      content.style.marginLeft = "0";
-      alert("Barra lateral fechada!"); // Adiciona um alerta para teste
-    }
-  }
+
+var menuItem = document.querySelectorAll('.item-menu')
+
+function selectLink(){
+  menuItem.forEach((item)=>
+    item.classList.remove('ativo')
+  )
+  this.classList.add('ativo')
+}
+
+menuItem.forEach((item)=>
+   item.addEventListener('click',selectLink)
+)
+
+//Expandir o menu
+
+var btnEXP = document.querySelector('#btn-exp')
+var menuSide = document.querySelector('.menu-lateral')
+
+btnEXP.addEventListener('click',function(){
+    menuSide.classList.toggle('expandir')
+})

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Currículo</title>
+    <link rel="stylesheet" href="curriculo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Currículo</h1>
+        <form id="cv-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            
+            <label for="contact">Contato:</label>
+            <input type="text" id="contact" required>
+            
+            <label for="education">Formação Acadêmica:</label>
+            <textarea id="education" required></textarea>
+            
+            <label for="experience">Experiência Profissional:</label>
+            <textarea id="experience" required></textarea>
+            
+            <label for="skills">Habilidades:</label>
+            <textarea id="skills" required></textarea>
+            
+            <button type="submit">Gerar Currículo</button>
+        </form>
+        <div id="cv-preview">
+            <!-- Aqui será exibido o currículo gerado -->
+        </div>
+    </div>
+    <script src="curriculo.js"></script>
+</body>
+</html>
