@@ -9,7 +9,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #061249;
+            background-image: url('img/ELECTRON.png');
+            background-size: cover; /* para cobrir todo o espaço disponível */
+            background-position: center 10%;
             margin: 0;
             padding: 0;
             display: flex;
@@ -37,7 +39,7 @@
             text-align: left;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #f2f2f2b6;
         }
         .button-group {
             overflow: hidden;
@@ -58,18 +60,21 @@
             background-color: #061249;
             color: white;
         }
+        #listPerson{
+            background-color: #f2f2f2b6;
+        }
     </style>
 </head>
 <body>
     <nav class="menu-lateral">
-    
+
         <div class="btn-expandir">
-           <i class="bi bi-list"></i>
+           <i class="bi bi-list" id="btn-exp"></i>
         </div>
-  
+    
         <ul>
           <li class="item-menu">
-            <a href="#">
+            <a href="tela_inicial.html">
               <span class="icon"><i class="bi bi-house-door"></i></span>
               <span class="txt-link">Home</span>
             </a>
@@ -77,31 +82,33 @@
           <li class="item-menu">
             <a href="#">
               <span class="icon"><i class="bi bi-columns-gap"></i></span>
-              <span class="txt-link">Dashboard</span>
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="#">
-              <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
-              <span class="txt-link">Cadastrar</span>
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="#">
-              <span class="icon"><i class=""></i></span>
               <span class="txt-link">Atividades</span>
             </a>
           </li>
           <li class="item-menu">
             <a href="#">
-              <span class="icon"><i class=""></i></span>
+              <span class="icon"><i class="bi bi-people-fill"></i></span>
+              <span class="txt-link">Cadastrar</span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="tela_perfil.html">
+              <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
               <span class="txt-link">Perfil</span>
             </a>
           </li>
+          <li class="item-menu">
+            <a href="index.html">
+              <span class="icon"><i class="bi bi-box-arrow-left"></i></bi></span>
+              <span class="txt-link">Sair</span>
+            </a>
+          </li>
         </ul>
-    </nav>
-    <div class="container">
-        <h2>Pessoas Cadastrados</h2>
+    
+    
+      </nav>
+    <div id="listPerson"class="container">
+        <h2>Pessoal </h2>
         <table>
             <thead>
                 <tr>
