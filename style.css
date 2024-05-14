@@ -1,25 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/ELECTRON.png');
+    background-size: cover; /* para cobrir todo o espaço disponível */
+    background-position: center 10%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
-body{
-    height: 100vh;
-}
+
+
 nav.menu-lateral{
     width: 80px;
     height: 100%;
     background-color: #202020;
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 blue;
+
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: .5s;
 }
-nav.menu-lateral:hover{
+
+nav.menu-lateral.expandir{
     width: 300px;
 }
 
@@ -33,24 +47,47 @@ nav.menu-lateral:hover{
     font-size: 24px;
     cursor: pointer;
 }
+
 ul{
     height: 100%;
     list-style-type: none;
 }
+
 ul li.item-menu{
     transition: .2s;
 }
 
+ul li.ativo{
+    background-color: blue;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #061249;
-    margin: 0;
-    padding: 0;
+ul li.item-menu:hover{
+    background: blue;
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
 }
 .container {
     background-color: #ffffffb2;
@@ -59,14 +96,48 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 600px;
 }
+
+
 #profileForm{
     background-color: #ffffffb2;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 300px;
-    width: 100%;
+    width: 150%;
 }
+
+#profileForm input[type="text"],
+#profileForm input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#profileForm input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+
+#CadFormAtividade{
+    background-color: #ffffffb2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+form {
+    margin: 6;
+}
+
 .button-group button {
     float: right;
     margin-left: 10px;
@@ -75,29 +146,59 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-input[type="submit"],button {
+.button-group {
+    overflow: hidden;
+}
+.button-group button {
+    float: right;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}        
+
+.form-group {
+    
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.form-group label {
+    display: block;
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+    /* font-weight: bold; */
+}
+.form-group select,.form-group input[type="text"] {
+    width: calc(100% - 170px);
+    float: right;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group select {
+    width: calc(100% - 166px);
+}
+
+.buttons:hover,
+.button:hover {
     background-color: #061249;
+}
+.button{
+    background-color: #0c0a9e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buttons{
+    background-color: #0c0a9e;
     color: white;
     padding: 10px 20px;
     border: none;
-    float: right;
     border-radius: 4px;
     cursor: pointer;
-    margin: 20dp;
-    
-}
-
-input[type="submit"] {
-    background-color: #061249;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.button-group button.clear {
-    background-color: #061249;
-    color: white;
-}
-.button-group button.cancel {
-    background-color: #061249;
-    color: white;
+    float: right;        
 }
