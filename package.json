@@ -1,7 +1,7 @@
 {
   "name": "my-electron-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto Casa de Adulão",
   "main": "index.js",
   "scripts": {
     "dev": "electron ."

@@ -1,3 +1,9 @@
+<!--
+   
+  Descrição: Tela de Perfil das Pessoas Acolhidas Cadastradas na Aplicação.
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +13,7 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <title>Perfil do Usuário</title>
+    <title>Casa de Adulão - Perfil do Usuário</title>
     
 </head>
 <body>
@@ -59,13 +65,13 @@
         <form id="profileForm">
             <h2>Perfil do Usuário</h2>
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required placeholder="Nome de Usuário"><br>
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required><br>
+            <input type="text" id="email" name="email" required placeholder="email de usuário"><br>
             <label for="password">Nova Senha:</label>
-            <input type="password" id="password" name="password" required><br>
+            <input type="password" id="password" name="password" required placeholder="Senha Atual"><br>
             <label for="confirmPassword">Confirmar Senha:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Nova Senha"><br>
             <div id="passwordError" class="error-message" style="display:none;">As senhas não coincidem.</div>
             <input class="button" type="submit" value="Salvar">
         </form>

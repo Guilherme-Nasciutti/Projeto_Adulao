@@ -4,20 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minha Página</title>
-    <style>
-      body {
-        background-image: url("img/ELECTRON.png");
-        background-size: cover; /* para cobrir todo o espaço disponível */
-        background-position: center 10%; /* centraliza a imagem */
-        /* opcional: define uma cor de fundo caso a imagem não carregue ou seja pequena */
-        background-color: #f2f2f2;
-      }
-      /* adicione estilos adicionais para o conteúdo da sua página aqui */
-    </style>
+    <link rel="stylesheet" href="pop.css">
   </head>
   <body>
-    <!-- O conteúdo da sua página vai aqui -->
-    <h1>Bem-vindo à Minha Página</h1>
-    <p>Este é um exemplo de como adicionar uma imagem de fundo.</p>
+    <button id="openPopupBtn">Abrir Cadastro</button>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopupBtn" class="close-btn">&times;</span>
+            <h2>Cadastro</h2>
+            <form id="cadastroForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="cpf">Data de Nascimento:</label>
+                <input type="text" id="dataNascimento" name="dataNascimento" placeholder="dd/mm/yyyy" maxlength="10" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="escolaridade">Escolaridade:</label>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="fundamental">Fundamental</option>
+                    <option value="medio">Médio</option>
+                    <option value="superior">Superior</option>
+                    <option value="pos-graduacao">Pós-graduação</option>
+                </select>
+
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+  
+      <script src="pop.js"></script>
   </body>
-</html>
+  </html>

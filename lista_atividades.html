@@ -1,3 +1,9 @@
+<!--
+   
+  Descrição: Tela de visualização das atividades participadas pelos usuários.
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +13,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="popup.css">
     
-    <title>Visualizar Atividades</title>
+    <title>Casa de Adulão - Visualizar Atividades</title>
     
 </head>
 <style>
@@ -89,7 +95,7 @@
           <li class="item-menu">
             <a href="tela_inicial.html">
               <span class="icon"><i class="bi bi-house-door"></i></span>
-              <span class="txt-link">Home</span>
+              <span class="txt-link">Inicio</span>
             </a>
           </li>
           <li class="item-menu">
@@ -127,10 +133,10 @@
             <thead>
                 <tr>
                     <th>Nome da Atividade</th>
-                    <th>Dia da semana</th>
+                    <th>Data</th>
                     <th>Horário</th>
-                    <th>Professor</th>
-                    <th>Participantes</th>
+                    <th>Instrutor</th>
+                    <th>Duração</th>
                 </tr>
             </thead>
             <tbody id="activityList">
@@ -158,9 +164,9 @@
     <script>
         // Dados de exemplo para preencher a tabela (pode ser substituído pelos dados do banco)
         const activities = [
-            { name: "Atividade 1", day: "Segunda-feira", time: "09:00", professor: "Prof. Fulano", participants: "João, Maria" },
-            { name: "Atividade 2", day: "Terça-feira", time: "14:00", professor: "Prof. Ciclano", participants: "Pedro, Ana" },
-            { name: "Atividade 3", day: "Quarta-feira", time: "10:30", professor: "Prof. Beltrano", participants: "Carlos, Julia" }
+            { name: "Atividade 1", day: "01/05/2024", time: "09:00", professor: "Prof. Fulano", participants: "4 Horas" },
+            { name: "Atividade 2", day: "02/05/2024", time: "14:00", professor: "Prof. Ciclano", participants: "3 Horas" },
+            { name: "Atividade 3", day: "03/05/2024", time: "10:30", professor: "Prof. Beltrano", participants: "2 Horas" }
         ];
 
         // Função para exibir as atividades na tabela
