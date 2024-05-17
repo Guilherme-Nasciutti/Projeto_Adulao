@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('img/ELECTRON.png');
+    background-image: url('/img/ELECTRON.png');
     background-size: cover; /* para cobrir todo o espaço disponível */
     background-position: center 10%;
     margin: 0;
@@ -30,7 +30,7 @@ nav.menu-lateral{
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .3s;
+    transition: .5s;
 }
 
 nav.menu-lateral.expandir{
@@ -44,7 +44,7 @@ nav.menu-lateral.expandir{
 
 .btn-expandir > i{
     color: white;
-    font-size: 36px;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -55,8 +55,6 @@ ul{
 
 ul li.item-menu{
     transition: .2s;
-    margin: 0px;
-    padding: 0px;
 }
 
 ul li.ativo{
@@ -136,10 +134,6 @@ ul li.item-menu a .icon > i{
     width: 600px;
 }
 
-form {
-    margin: 6;
-}
-
 .button-group button {
     float: right;
     margin-left: 10px;
@@ -198,7 +192,8 @@ form {
 .buttons{
     background-color: #0c0a9e;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    margin: 5dp;
     border: none;
     border-radius: 4px;
     cursor: pointer;
