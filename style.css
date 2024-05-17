@@ -30,7 +30,7 @@ nav.menu-lateral{
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: .3s;
 }
 
 nav.menu-lateral.expandir{
@@ -44,7 +44,7 @@ nav.menu-lateral.expandir{
 
 .btn-expandir > i{
     color: white;
-    font-size: 24px;
+    font-size: 36px;
     cursor: pointer;
 }
 
@@ -55,6 +55,8 @@ ul{
 
 ul li.item-menu{
     transition: .2s;
+    margin: 0px;
+    padding: 0px;
 }
 
 ul li.ativo{
