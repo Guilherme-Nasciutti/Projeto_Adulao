@@ -1,3 +1,10 @@
+/*
+
+    Descrição: Tela de validação do login para entrar na aplicação.
+
+*/
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("loginForm");
 

@@ -1,3 +1,9 @@
+/*
+
+    Descrição: Tela de Iniciação da aplicação. 
+
+*/
+
 const {app, BrowserWindow} = require('electron');
 
 let mainWindow;
