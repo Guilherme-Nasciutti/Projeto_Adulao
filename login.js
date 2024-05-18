@@ -4,13 +4,14 @@
 
 */
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("loginForm");
 
   // Definindo nome de usuário e senha para teste
   const usernameValid = "Joao";
+  // const usernameValid = Nome de usuário que deverá ser checado no banco de dados para validação
   const passwordValid = "1234";
+  // const passwordValid = Senha que deverá ser checado no banco de dados para validação
 
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // Evita o envio do formulário
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Verificando se o nome de usuário e a senha estão corretos
     if (username === usernameValid && password === passwordValid) {
-      alert("Login bem-sucedido!");
+      alert("Sucesso ao efetuar o Login!");
       // Aqui você pode redirecionar o usuário para outra página, se necessário
       window.location.href = "tela_inicial.html";
       // Por exemplo: window.location.href = "pagina_logada.html";
