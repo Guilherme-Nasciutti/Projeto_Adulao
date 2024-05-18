@@ -1,4 +1,8 @@
+/* 
 
+  Descrição: Tela para executar a validação do cadastro de usuários.
+
+*/
 var menuItem = document.querySelectorAll('.item-menu')
 
 function selectLink(){
