@@ -6,8 +6,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/img/ELECTRON.png');
-    background-size: cover; /* para cobrir todo o espaço disponível */
+    background-image: url('img/ELECTRON.png');
+    background-size: cover;
+    /* para cobrir todo o espaço disponível */
     background-position: center 10%;
     margin: 0;
     padding: 0;
@@ -17,15 +18,14 @@ body {
     height: 100vh;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
 
-
-nav.menu-lateral{
+nav.menu-lateral {
     width: 80px;
     height: 100%;
     background-color: #202020;
@@ -36,42 +36,52 @@ nav.menu-lateral{
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: .3s;
 }
 
-nav.menu-lateral.expandir{
+nav.menu-lateral.expandir {
     width: 300px;
 }
 
-.btn-expandir{
+.btn-expandir {
     width: 100%;
     padding-left: 10px;
 }
 
-.btn-expandir > i{
+.btn-expandir>i {
     color: white;
     font-size: 24px;
     cursor: pointer;
 }
 
-ul{
+ul {
     height: 100%;
     list-style-type: none;
+    margin: 0px;
+    padding: 0px;
 }
 
-ul li.item-menu{
+li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 20px;
+}
+
+ul li.item-menu {
     transition: .2s;
 }
 
-ul li.ativo{
+ul li.ativo {
     background-color: blue;
 }
 
-ul li.item-menu:hover{
+ul li.item-menu:hover {
     background: blue;
 }
 
-ul li.item-menu a{
+ul li.item-menu a {
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -80,21 +90,23 @@ ul li.item-menu a{
     margin-bottom: 20px;
     line-height: 40px;
 }
-ul li.item-menu a .txt-link{
+
+ul li.item-menu a .txt-link {
     margin-left: 70px;
     transition: .5s;
     opacity: 0;
 }
 
-nav.menu-lateral.expandir .txt-link{
+nav.menu-lateral.expandir .txt-link {
     margin-left: 40px;
     opacity: 1;
 }
 
-ul li.item-menu a .icon > i{
+ul li.item-menu a .icon>i {
     font-size: 30px;
     margin-left: 10px;
 }
+
 .container {
     background-color: #ffffffb2;
     padding: 20px;
@@ -103,8 +115,7 @@ ul li.item-menu a .icon > i{
     width: 60%;
 }
 
-
-#profileForm{
+#profileForm {
     background-color: #ffffffb2;
     padding: 20px;
     border-radius: 5px;
@@ -114,7 +125,7 @@ ul li.item-menu a .icon > i{
 }
 
 #profileForm input[type="text"],
-#profileForm input[type="password"]{
+#profileForm input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -124,15 +135,14 @@ ul li.item-menu a .icon > i{
     box-sizing: border-box;
 }
 
-#profileForm input[type="submit"]{
+#profileForm input[type="submit"] {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
     display: inline-block;
 }
 
-
-#CadFormAtividade{
+#CadFormAtividade {
     background-color: #ffffffb2;
     padding: 20px;
     border-radius: 8px;
@@ -154,9 +164,11 @@ ul li.item-menu a .icon > i{
     border-radius: 4px;
     cursor: pointer;
 }
+
 .button-group {
     overflow: hidden;
 }
+
 .button-group button {
     float: right;
     margin-left: 10px;
@@ -164,13 +176,13 @@ ul li.item-menu a .icon > i{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}        
+}
 
 .form-group {
-    
     margin-bottom: 15px;
     overflow: hidden;
 }
+
 .form-group label {
     display: block;
     float: left;
@@ -186,6 +198,7 @@ ul li.item-menu a .icon > i{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 .form-group select {
     width: calc(100% - 166px);
 }
@@ -194,14 +207,16 @@ ul li.item-menu a .icon > i{
 .button:hover {
     background-color: #061249;
 }
-.button{
+
+.button {
     background-color: #0c0a9e;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-.buttons{
+
+.buttons {
     background-color: #0c0a9e;
     color: white;
     padding: 10px 10px;
@@ -209,5 +224,5 @@ ul li.item-menu a .icon > i{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;        
+    float: right;
 }

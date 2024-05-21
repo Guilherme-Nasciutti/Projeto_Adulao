@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,15 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="popup.css">
     <title>Casa de Adulão - Visualizar Perfil</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
             background-image: url('img/ELECTRON.png');
-            background-size: cover; /* para cobrir todo o espaço disponível */
+            background-size: cover;
+            /* para cobrir todo o espaço disponível */
             background-position: center 10%;
             margin: 0;
             padding: 0;
@@ -26,6 +31,7 @@
             align-items: center;
             height: 100vh;
         }
+
         .container {
             background-color: #fff;
             padding: 20px;
@@ -33,24 +39,33 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             width: 800px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid #ddd;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
+
         th {
             background-color: #f2f2f2b6;
         }
+
         .button-group {
             overflow: hidden;
         }
+
         .button-group button {
             float: right;
             margin-left: 10px;
@@ -59,60 +74,63 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         .button-group button.edit {
             background-color: #061249;
             color: white;
         }
+
         .button-group button.delete {
             background-color: #061249;
             color: white;
         }
-        #listPerson{
+
+        #listPerson {
             background-color: #f2f2f2b6;
         }
     </style>
 </head>
+
 <body>
+  
     <nav class="menu-lateral">
 
         <div class="btn-expandir">
-           <i class="bi bi-list" id="btn-exp"></i>
+            <i class="bi bi-list" id="btn-exp"></i>
         </div>
-  
+
         <ul>
-          <li class="item-menu">
-            <a href="tela_inicial.html">
-              <span class="icon"><i class="bi bi-house-door"></i></span>
-              <span class="txt-link">Inicio</span>
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="lista_atividades.html">
-              <span class="icon"><i class="bi bi-columns-gap"></i></span>
-              <span class="txt-link">Atividades</span>
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="lista_pessoal.html">
-              <span class="icon"><i class="bi bi-people-fill"></i></span>
-              <span class="txt-link">Pessoal </span>
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="tela_perfil.html">
-              <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
-              <span class="txt-link">Perfil</span>
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="index.html">
-              <span class="icon"><i class="bi bi-box-arrow-left"></i></bi></span>
-              <span class="txt-link">Sair</span>
-            </a>
-          </li>
-        </ul>
-  
-  
+            <li class="item-menu">
+                <a href="tela_inicial.html">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                    <span class="txt-link">Inicio</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="lista_pessoal.html">
+                    <span class="icon"><i class="bi bi-people-fill"></i></span>
+                    <span class="txt-link">Pessoal</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="lista_atividades.html">
+                    <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                    <span class="txt-link">Atividades</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="tela_perfil.html">
+                    <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
+                    <span class="txt-link">Perfil</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="index.html">
+                    <span class="icon"><i class="bi bi-box-arrow-left"></i></bi></span>
+                    <span class="txt-link">Sair</span>
+                </a>
+            </li>
+        </ul> 
       </nav>
   
     <div id="listPerson"class="container">
@@ -166,7 +184,7 @@
             </form>
         </div>
     </div>
- <script src="popup_pessoa.js"></script>
+    <script src="popup_pessoa.js"></script>
     <script>
         // Dados de exemplo para preencher a tabela (pode ser substituído pelos dados do banco)
         const customers = [
@@ -209,9 +227,10 @@
         }
 
         // Exibir os clientes ao carregar a página
-        window.onload = function() {
+        window.onload = function () {
             displayCustomers();
         };
     </script>
 </body>
+
 </html>
