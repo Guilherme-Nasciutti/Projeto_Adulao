@@ -112,7 +112,7 @@ ul li.item-menu a .icon>i {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 60%;
+    width: 600px;
 }
 
 #profileForm {
@@ -150,12 +150,6 @@ ul li.item-menu a .icon>i {
     width: 600px;
 }
 
-.title{
-    text-align: center;
-    padding: 5dp;
-    margin-bottom: 5dp;
-}
-
 .button-group button {
     float: right;
     margin-left: 10px;
@@ -190,7 +184,9 @@ ul li.item-menu a .icon>i {
     margin-right: 10px;
     /* font-weight: bold; */
 }
-.form-group select,.form-group input[type="text"], .form-group textarea, .form-group input[type="date"]{
+
+.form-group select,
+.form-group input[type="text"] {
     width: calc(100% - 170px);
     float: right;
     padding: 10px;
@@ -220,7 +216,7 @@ ul li.item-menu a .icon>i {
     background-color: #0c0a9e;
     color: white;
     padding: 10px 10px;
-    margin: 8dp;
+    margin: 5dp;
     border: none;
     border-radius: 4px;
     cursor: pointer;
