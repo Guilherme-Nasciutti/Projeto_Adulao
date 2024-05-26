@@ -82,6 +82,75 @@
         margin-bottom: 10px;
         text-transform: uppercase;
     }
+    .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-overlay.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%; /* Ajuste a largura conforme necessário */
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="date"],
+.popup-content input[type="time"],
+.popup-content textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.popup-content button[type="submit"] {
+    background-color: #1d4aac;
+    color: white;
+}
+
+.popup-content button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
     
 </style>
 
@@ -153,6 +222,12 @@
             <form id="activityForm">
                 <label for="activityName">Nome da Atividade:</label><br>
                 <input type="text" id="activityName" name="activityName" required><br>
+                <label for="activityName">Instrutor:</label><br>
+                <input type="text" id="activityinstructor" name="activityinstructor" required><br>
+                <label for="activityName">Data:</label><br>
+                <input type="date" id="activityDate" name="activityDate" required><br>
+                <label for="activityName">Horário:</label><br>
+                <input type="time" id="activityHour" name="activityHour" required><br>
                 <label for="activityDescription">Descrição:</label><br>
                 <textarea id="activityDescription" name="activityDescription" rows="4" cols="50" required></textarea><br><br>
                 <button type="submit">Cadastrar</button>
