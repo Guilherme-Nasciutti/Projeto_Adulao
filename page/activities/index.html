@@ -1,291 +1,95 @@
-<!--
-   
-  Descrição: Tela de visualização das atividades participadas pelos usuários.
-
--->
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="popup.css">
-    
-    <title>Casa de Adulão - Visualizar Atividades</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Casa de Adulão - Atividades</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/toolbar.css" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-image: url('img/ELECTRON.png');
-        background-size: cover; /* para cobrir todo o espaço disponível */
-        background-position: center 10%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .container {
-        background-color: #ffffffb2;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        width: 800px;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        align-items: flex-start;
-        margin-bottom: 10px;
-        /* margin-bottom: 20px; */
-    }
-    table, th, td {
-        border: 1px solid #ddd;
-    }
-    th, td {
-        padding: 10px;
-        text-align: left;
-    }
-    th {
-        background-color: #e1e1e19c;
-        text-align: center;
-    }
-    .button-group {
-        overflow: hidden;
-    }
-    .button-group button {
-        float: right;
-        margin-left: 10px;
-        padding: 6px 12px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    .button-group button.edit {
-        background-color: #061249;
-        color: #e3e8fe;
-    }
-    .button-group button.delete {
-        background-color: #8f1300;
-        color: #ffe1dc;
-    }
-    #listPerson{
-        background-color: #f2f2f2b6;
-    }
-    h2{
-        text-align: center;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-    .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-}
-
-.popup-overlay.show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    width: 90%; /* Ajuste a largura conforme necessário */
-    text-align: center;
-}
-
-.popup-content h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.popup-content form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup-content input[type="text"],
-.popup-content input[type="number"],
-.popup-content input[type="date"],
-.popup-content input[type="time"],
-.popup-content textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.popup-content button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-.popup-content button[type="submit"] {
-    background-color: #1d4aac;
-    color: white;
-}
-
-.popup-content button[type="button"] {
-    background-color: #f44336;
-    color: white;
-}
-    
-</style>
 
 <body>
-    
-    <nav class="menu-lateral">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Casa de Adulão</h3>
 
-        <div class="btn-expandir">
-           <i class="bi bi-list" id="btn-exp"></i>
-        </div>
-  
-        <ul>
-            <li class="item-menu">
-              <a href="tela_inicial.html">
-                <span class="icon"><i class="bi bi-house-door"></i></span>
-                <span class="txt-link">Inicio</span>
-              </a>
-            </li>
-            <li class="item-menu">
-              <a href="lista_pessoal.html">
-                <span class="icon"><i class="bi bi-people-fill"></i></span>
-                <span class="txt-link">Pessoal</span>
-              </a>
-            </li>
-            <li class="item-menu">
-              <a href="lista_atividades.html">
-                <span class="icon"><i class="bi bi-columns-gap"></i></span>
-                <span class="txt-link">Atividades</span>
-              </a>
-            </li>
-            <li class="item-menu">
-              <a href="tela_perfil.html">
-                <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
-                <span class="txt-link">Perfil</span>
-              </a>
-            </li>
-            <li class="item-menu">
-              <a href="index.html">
-                <span class="icon"><i class="bi bi-box-arrow-left"></i></bi></span>
-                <span class="txt-link">Sair</span>
-              </a>
-            </li>
-          </ul>
-     
-     </nav>
-    
-      <script src="cadastro.js"></script> 
-    <div class="container">
-        <h2>Atividades</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome da Atividade</th>
-                    <th>Data</th>
-                    <th>Horário</th>
-                    <th>Instrutor</th>
-                    <th>Duração</th>
-                </tr>
-            </thead>
-            <tbody id="activityList">
-                <!-- Aqui serão adicionadas as atividades dinamicamente -->
-            </tbody>
-        </table>
-        <button class="buttons" onclick="openPopup()">Cadastrar Atividade</button>
-    </div>
-    <div id="popup" class="popup-overlay">
-        <div class="popup-content">
-            <h2>Cadastrar Atividade</h2>
-            <form id="activityForm">
-                <label for="activityName">Nome da Atividade:</label><br>
-                <input type="text" id="activityName" name="activityName" required><br>
-                <label for="activityName">Instrutor:</label><br>
-                <input type="text" id="activityinstructor" name="activityinstructor" required><br>
-                <label for="activityName">Data:</label><br>
-                <input type="date" id="activityDate" name="activityDate" required><br>
-                <label for="activityName">Horário:</label><br>
-                <input type="time" id="activityHour" name="activityHour" required><br>
-                <label for="activityDescription">Descrição:</label><br>
-                <textarea id="activityDescription" name="activityDescription" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Cadastrar</button>
-                <button type="button" onclick="closePopup()">Cancelar</button>
-            </form>
-        </div>
-    </div>
-    <script src="popup_atividades.js"></script>
+    <nav>
+      <ul class="container_links">
+        <li>
+          <a href="../home.html">
+            <i class="bi bi-house-door"></i> Inicio
+          </a>
+        </li>
+        <li>
+          <a href="../persons/index.html">
+            <i class="bi bi-people-fill"></i> Pessoas
+          </a>
+        </li>
+        <li>
+          <a href="#" class="actived">
+            <i class="bi bi-columns-gap"></i> Atividades
+          </a>
+        </li>
+        <li>
+          <a href="../users/index.html">
+            <i class="bi bi-person-fill-gear"></i> Administradores
+          </a>
+        </li>
+        <li>
+          <a href="../roles/index.html">
+            <i class="bi bi-gear-wide-connected"></i> Perfis
+          </a>
+        </li>
+        <li>
+          <a href="../profile.html">
+            <i class="bi bi-person-vcard-fill"></i> Meus dados
+          </a>
+        </li>
+        <li>
+          <a href="../../index.html">
+            <i class="bi bi-box-arrow-left"></i> Sair
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 
+  <!-- Header -->
+  <header class="toolbar">
+    <nav>
+      <i class="bi bi-list" id="expand"></i>
 
-    <script>
-        // Dados de exemplo para preencher a tabela (pode ser substituído pelos dados do banco)
-        const activities = [
-            { name: "Atividade 1", day: "01/05/2024", time: "09:00", professor: "Prof. Fulano", participants: "4 Horas" },
-            { name: "Atividade 2", day: "02/05/2024", time: "14:00", professor: "Prof. Ciclano", participants: "3 Horas" },
-            { name: "Atividade 3", day: "03/05/2024", time: "10:30", professor: "Prof. Beltrano", participants: "2 Horas" }
-        ];
+      <ul>
+        <li>Primeiro nome</li>
 
-        // Função para exibir as atividades na tabela
-        function displayActivities() {
-            const tableBody = document.getElementById('activityList');
-            tableBody.innerHTML = '';
+        <li>
+          <a href="../../index.html">
+            <i class="bi bi-box-arrow-left"></i> Sair
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-            activities.forEach(activity => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${activity.name}</td>
-                    <td>${activity.day}</td>
-                    <td>${activity.time}</td>
-                    <td>${activity.professor}</td>
-                    <td>${activity.participants}</td>
-                    <td class="button-group">
-                        <button class="edit" onclick="editActivity('${activity.name}')">Editar</button>
-                    </td>
-                    <td class="button-group">    
-                        <button class="delete" onclick="deleteActivity('${activity.name}')">Apagar</button>
-                    </td>
-                `;
-                tableBody.appendChild(row);
-            });
-        }
+  <!-- Main -->
+  <main class="container_main">
+    <header>
+      <h2>Atividades</h2>
+      <a href="./add.html">Nova atividade</a>
+    </header>
 
-        // Função para editar uma atividade
-        function editActivity(name) {
-            // Aqui você pode implementar a lógica para editar a atividade com o nome fornecido
-            console.log("Editar atividade:", name);
-        }
+    <main>
+      List
+    </main>
+  </main>
 
-        // Função para apagar uma atividade
-        function deleteActivity(name) {
-            // Aqui você pode implementar a lógica para apagar a atividade com o nome fornecido
-            console.log("Apagar atividade:", name);
-        }
-
-        // Exibir as atividades ao carregar a página
-        window.onload = function() {
-            displayActivities();
-        };
-    </script>
+  <script src="../../assets/scripts/sidebar.js"></script>
 </body>
 </html>
