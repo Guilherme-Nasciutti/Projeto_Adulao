@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (username === usernameValid && password === passwordValid) {
       alert("Sucesso ao efetuar o Login!");
-      window.location.href = "/pages/tela_inicial.html";
+      window.location.href = "/page/home.html";
       
     } else {
       alert("Nome de usuário ou senha incorretos. Tente novamente.");
