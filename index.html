@@ -1,29 +1,40 @@
-<!--
-   
-  Descrição: Tela de Login da Aplicação.
-
--->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Casa de Adulão - Login</title>
 
-    <link rel="stylesheet" href="./assets/css/styleLogin.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
   </head>
   <body>
-   
-    <form id="loginForm" action="#" method="post">
-      <h2>Login</h2>
-      <label for="username">Nome de Usuário:</label>
-      <input type="text" id="username" name="username" required placeholder="Nome do usuário" />
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password" required placeholder="Senha"/>
-      <input class="buttons" type="submit" value="Login" />
-    </form>
-    
+    <main>
+      <form method="post">
+        <h2>Login</h2>
+
+        <div class="row">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" name="username" placeholder="Nome do usuário" required value="Joao" />
+        </div>
+
+        <div class="row">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="Senha" required value="1234" />
+        </div>
+
+        <p class="link_password"><a href="#">Esqueceu a senha?</a></p>
+
+        <button type="submit">Acessar</button>
+      </form>
+    </main>
+
+    <footer>
+      Copyright © 2024. Todos os direitos reservados
+    </footer>
+
     <script src="./assets/scripts/login.js"></script>
   </body>
 </html>

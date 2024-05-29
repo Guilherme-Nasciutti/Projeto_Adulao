@@ -1,225 +1,62 @@
-/*
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-    Descrição: Estilização geral dos elementos reaproveitaveis.
-
-*/
-
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('img/ELECTRON.png');
-    background-size: cover;
-    /* para cobrir todo o espaço disponível */
-    background-position: center 10%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+:root {
+    --red: #FF3B3B;
+    --blue: #0364A9;
+    --grey: #CCCCCC;
+    --gray: #FAFAFA;
+    --dark: #5A5A5A;
+    --white: #FFFFFF;
+    --green: #1F9254;
+    --black: #000000;
+    --baby: #0364a933;
+    --orange: #FF8E00;
+    --yellow: #FBBC04;
 }
-
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
 }
 
-nav.menu-lateral {
-    width: 80px;
-    height: 100%;
-    background-color: #202020;
-    padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 blue;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transition: .3s;
+body {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
 }
 
-nav.menu-lateral.expandir {
-    width: 300px;
-}
-
-.btn-expandir {
-    width: 100%;
-    padding-left: 10px;
-}
-
-.btn-expandir>i {
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-ul {
-    height: 100%;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-li {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    gap: 20px;
-}
-
-ul li.item-menu {
-    transition: .2s;
-}
-
-ul li.ativo {
-    background-color: blue;
-}
-
-ul li.item-menu:hover {
-    background: blue;
-}
-
-ul li.item-menu a {
-    color: white;
+a {
+    color: var(--blue);
     text-decoration: none;
-    font-size: 20px;
-    padding: 20px 4%;
+}
+
+/* FORMS */
+.row {
+    gap: .3em;
     display: flex;
-    margin-bottom: 20px;
-    line-height: 40px;
+    flex-direction: column;
 }
 
-ul li.item-menu a .txt-link {
-    margin-left: 70px;
-    transition: .5s;
-    opacity: 0;
+label {
+    font-size: 1em;
+    font-weight: 500;
 }
 
-nav.menu-lateral.expandir .txt-link {
-    margin-left: 40px;
-    opacity: 1;
+input {
+    border: 1px solid var(--grey);
 }
 
-ul li.item-menu a .icon>i {
-    font-size: 30px;
-    margin-left: 10px;
-}
-
-.container {
-    background-color: #ffffffb2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 600px;
-}
-
-#profileForm {
-    background-color: #ffffffb2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    width: 150%;
-}
-
-#profileForm input[type="text"],
-#profileForm input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-#profileForm input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-}
-
-#CadFormAtividade {
-    background-color: #ffffffb2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 600px;
-}
-
-.button-group button {
-    float: right;
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+button {
+    font-weight: 600;
     cursor: pointer;
-}
-
-.button-group {
-    overflow: hidden;
-}
-
-.button-group button {
-    float: right;
-    margin-left: 10px;
-    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    color: var(--white);
+    background: var(--blue);
 }
 
-.form-group {
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.form-group label {
-    display: block;
-    float: left;
-    width: 150px;
-    margin-right: 10px;
-    /* font-weight: bold; */
-}
-
-.form-group select,
-.form-group input[type="text"] {
-    width: calc(100% - 170px);
-    float: right;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.form-group select {
-    width: calc(100% - 166px);
-}
-
-.buttons:hover,
-.button:hover {
-    background-color: #061249;
-}
-
-.button {
-    background-color: #0c0a9e;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.buttons {
-    background-color: #0c0a9e;
-    color: white;
-    padding: 10px 10px;
-    margin: 5dp;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
+input,
+button {
+    padding: 8px;
+    border-radius: 6px;
+    outline: none;
 }
